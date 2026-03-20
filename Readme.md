@@ -142,19 +142,17 @@ Confidence-based decision thresholds prevent false negatives
 
 This ensures fairness while maintaining security.
 
-Tech Stack
+Technology Stack
 
 The system is built using scalable and modern technologies:
 
-Backend: Python (Flask / FastAPI)
+Backend: Python (Flask)
 
-AI/ML: Scikit-learn, TensorFlow or PyTorch, NLP & Computer Vision
+AI/ML: Scikit-learn, TensorFlow
 
 Frontend: React.js with standard web technologies
 
 Database: MongoDB or MySQL
-
-Deployment: AWS or Firebase
 
 Impact
 
