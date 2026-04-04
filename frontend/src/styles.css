@@ -1,0 +1,373 @@
+:root {
+  color-scheme: light;
+  --bg: #f5efe3;
+  --bg-deep: #d8e4df;
+  --ink: #1e2b2a;
+  --ink-soft: #566866;
+  --line: rgba(30, 43, 42, 0.12);
+  --card: rgba(255, 250, 241, 0.88);
+  --accent: #d46537;
+  --success: #237457;
+  --danger: #9a3e2d;
+  --shadow: 0 18px 50px rgba(52, 66, 61, 0.14);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(212, 101, 55, 0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(31, 122, 114, 0.16), transparent 28%),
+    linear-gradient(160deg, var(--bg), var(--bg-deep));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  padding: 24px;
+}
+
+.topbar,
+.hero-strip,
+.panel,
+.auth-card {
+  backdrop-filter: blur(16px);
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 28px;
+  border-radius: 28px;
+}
+
+.brand,
+.hero-strip h2,
+.panel h2,
+.panel h3,
+.auth-card h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: rgba(31, 122, 114, 0.12);
+  color: var(--ink);
+}
+
+.hero-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+  padding: 24px 28px;
+  border-radius: 28px;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-meta span {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(212, 101, 55, 0.1);
+}
+
+.page-content {
+  margin-top: 22px;
+}
+
+.panel {
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.section-head,
+.list-row,
+.claim-row,
+.zone-row,
+.claim-card-head,
+.claim-metrics {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.section-actions,
+.inline-action {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.stats-grid,
+.two-column,
+.claim-subgrid,
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-top: 20px;
+}
+
+.two-column {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.claim-subgrid,
+.form-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: min(720px, 100%);
+  padding: 34px;
+  border-radius: 30px;
+}
+
+.auth-card.wide {
+  width: min(920px, 100%);
+}
+
+.auth-form,
+.stack-sm,
+.stack-lg {
+  display: grid;
+  gap: 16px;
+}
+
+.page-center,
+.error-panel {
+  padding: 36px;
+  text-align: center;
+}
+
+.quote-card,
+.stat-card,
+.claim-card,
+.list-row,
+.claim-row,
+.zone-row {
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.quote-card,
+.claim-card {
+  padding: 20px;
+}
+
+.list-row,
+.claim-row,
+.zone-row {
+  padding: 14px 16px;
+}
+
+.stat-card {
+  padding: 18px;
+}
+
+.stat-card p,
+.muted,
+.eyebrow {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.75rem;
+}
+
+.stat-card.warm {
+  background: rgba(212, 101, 55, 0.12);
+}
+
+.stat-card.cool {
+  background: rgba(31, 122, 114, 0.12);
+}
+
+.stat-card.alert {
+  background: rgba(194, 139, 32, 0.16);
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--accent), #ea8a56);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.button.secondary,
+.button.ghost {
+  background: rgba(31, 122, 114, 0.12);
+  color: var(--ink);
+}
+
+.button.ghost {
+  background: rgba(30, 43, 42, 0.06);
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink-soft);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.full-span {
+  grid-column: 1 / -1;
+}
+
+.decision-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.decision-badge.approved {
+  background: rgba(35, 116, 87, 0.16);
+  color: var(--success);
+}
+
+.decision-badge.flagged {
+  background: rgba(194, 139, 32, 0.18);
+  color: #8f6111;
+}
+
+.decision-badge.rejected {
+  background: rgba(154, 62, 45, 0.16);
+  color: var(--danger);
+}
+
+.decision-badge.pending {
+  background: rgba(30, 43, 42, 0.08);
+  color: var(--ink-soft);
+}
+
+.align-right {
+  text-align: right;
+}
+
+.success-text {
+  color: var(--success);
+}
+
+.error-text,
+.error-panel {
+  color: var(--danger);
+}
+
+@media (max-width: 820px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .topbar,
+  .hero-strip,
+  .section-head,
+  .list-row,
+  .claim-row,
+  .zone-row,
+  .claim-card-head,
+  .claim-metrics {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .align-right {
+    text-align: left;
+  }
+}
