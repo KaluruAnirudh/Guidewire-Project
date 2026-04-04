@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Bengaluru Central",
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "baseline_risk": 0.48,
+    "location_risk": 0.43,
+    "rain_disruption": 0.62,
+    "pollution_disruption": 0.31,
+    "disaster_disruption": 0.28
+  },
+  {
+    "name": "Mumbai Metro",
+    "lat": 19.076,
+    "lon": 72.8777,
+    "baseline_risk": 0.71,
+    "location_risk": 0.68,
+    "rain_disruption": 0.88,
+    "pollution_disruption": 0.37,
+    "disaster_disruption": 0.41
+  },
+  {
+    "name": "Delhi NCR",
+    "lat": 28.6139,
+    "lon": 77.209,
+    "baseline_risk": 0.66,
+    "location_risk": 0.58,
+    "rain_disruption": 0.46,
+    "pollution_disruption": 0.89,
+    "disaster_disruption": 0.34
+  },
+  {
+    "name": "Hyderabad Core",
+    "lat": 17.385,
+    "lon": 78.4867,
+    "baseline_risk": 0.44,
+    "location_risk": 0.39,
+    "rain_disruption": 0.54,
+    "pollution_disruption": 0.28,
+    "disaster_disruption": 0.23
+  },
+  {
+    "name": "Chennai Coast",
+    "lat": 13.0827,
+    "lon": 80.2707,
+    "baseline_risk": 0.63,
+    "location_risk": 0.61,
+    "rain_disruption": 0.76,
+    "pollution_disruption": 0.24,
+    "disaster_disruption": 0.37
+  },
+  {
+    "name": "Pune Hub",
+    "lat": 18.5204,
+    "lon": 73.8567,
+    "baseline_risk": 0.41,
+    "location_risk": 0.35,
+    "rain_disruption": 0.49,
+    "pollution_disruption": 0.33,
+    "disaster_disruption": 0.2
+  },
+  {
+    "name": "Kolkata East",
+    "lat": 22.5726,
+    "lon": 88.3639,
+    "baseline_risk": 0.58,
+    "location_risk": 0.52,
+    "rain_disruption": 0.72,
+    "pollution_disruption": 0.4,
+    "disaster_disruption": 0.36
+  }
+]
+

@@ -1,0 +1,220 @@
+{
+  "info": {
+    "name": "RouteRelief",
+    "_postman_id": "b694f1bb-c2ab-4c78-ae3c-2f45d9201a55",
+    "description": "Sample requests for the RouteRelief platform.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000/api"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Asha Rider\",\n  \"email\": \"asha@example.com\",\n  \"password\": \"Secret123!\",\n  \"work_type\": \"delivery\",\n  \"weekly_earnings_estimate\": 4500,\n  \"location\": {\n    \"lat\": 12.9716,\n    \"lon\": 77.5946\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/auth/register",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"asha@example.com\",\n  \"password\": \"Secret123!\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/auth/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Policy Quote",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/policies/quote",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "policies",
+            "quote"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buy Policy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/policies/buy",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "policies",
+            "buy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Submit Claim",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "incident_at",
+              "value": "2026-04-04T10:30:00",
+              "type": "text"
+            },
+            {
+              "key": "reason",
+              "value": "rain",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Heavy rain forced order cancellations across my route.",
+              "type": "text"
+            },
+            {
+              "key": "lat",
+              "value": "12.9716",
+              "type": "text"
+            },
+            {
+              "key": "lon",
+              "value": "77.5946",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/claims/submit",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "claims",
+            "submit"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Dashboard Summary",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/dashboard/summary",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "dashboard",
+            "summary"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Active Triggers",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"location\": {\n    \"lat\": 12.9716,\n    \"lon\": 77.5946\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/ai/active-triggers",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "ai",
+            "active-triggers"
+          ]
+        }
+      }
+    }
+  ]
+}
