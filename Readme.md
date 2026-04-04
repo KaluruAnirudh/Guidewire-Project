@@ -2,6 +2,8 @@ Project Topic: Smart Insurance System
 
 Problem statement explanation link: https://drive.google.com/file/d/1Ls411mV3OasSJ5DCFBvJVLj6KjrLCvDn/view?usp=sharing
 
+Project Demo: https://drive.google.com/file/d/1tzEtzbSbSqsM94_z4Av_MOjVCbOO3Fob/view?usp=sharing
+
 Problem Statement
 The traditional insurance ecosystem suffers from inefficiencies, delayed claim processing, and increasing vulnerability to fraud. With the rise of parametric insurance systems, new attack vectors have emerged where bad actors manipulate input data to trigger automated payouts.
 
